@@ -2506,6 +2506,58 @@ test("prueba62 Padovan", function () {
   ok(valorEsperado == valorObtenido, "Correcto");
 });
 
+test("prueba63 Suerte", function () {
+  objSu = new NumeroSuerte();
+  valorEsperado = 3;
+  objSu.avanzar(); 
+  valorObtenido = objSu.getValor();
+  ok(valorEsperado == valorObtenido, "correcto");
+});
+
+test("prueba64 Suerte", function () {
+  objSu = new NumeroSuerte();
+  valorEsperado = 15;
+  objSu.avanzar(); 
+  objSu.avanzar(); 
+  objSu.avanzar(); 
+  objSu.avanzar(); 
+  objSu.avanzar(); 
+  objSu.avanzar(); 
+  objSu.avanzar(); 
+  objSu.retroceder();
+  objSu.retroceder();
+  valorObtenido = objSu.getValor();
+  ok(valorEsperado == valorObtenido, "correcto");
+});
+
+test("prueba65 FibonacciFeliz", function () {
+  objFibo = new NumeroFibonacci();
+  valorEsperado = false;
+  objFibo.avanzar(); 
+  objFibo.avanzar();
+  objFibo.avanzar();
+  valorObtenido = objFibo.feliz(objFibo.getValor());
+  ok(valorEsperado == valorObtenido, "Correcto");
+});
+
+test("prueba66 Ulam", function () {
+  objFibo = new NumeroUlam();
+  valorEsperado = 4;
+  objFibo.avanzar(); 
+  objFibo.avanzar();
+  objFibo.avanzar();
+  valorObtenido = objFibo.getValor();
+  ok(valorEsperado == valorObtenido, "Correcto");
+});
+
+test("prueba67 CapicuaFibo", function () {
+  objFibo = new NumeroFibonacci();
+  valorEsperado = true;
+  
+  valorObtenido = objFibo.Capicua("161");
+  ok(valorEsperado == valorObtenido, "Correcto");
+});
+
 
 
 

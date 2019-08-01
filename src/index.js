@@ -6,11 +6,11 @@ let mainWindow
 let createTests
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 500,
-    height: 460
+    width: 900,
+    height: 900
   });
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'view/index2.html'),
+    pathname: path.join(__dirname, 'view/index.html'),
     protocol: 'file',
     slashes: true
   }))
@@ -20,7 +20,7 @@ app.on('ready', () => {
 
 function createTest() {
   createTests = new BrowserWindow({
-    width: 600,
+    width: 800,
     height: 600,
     title: 'test'
   });

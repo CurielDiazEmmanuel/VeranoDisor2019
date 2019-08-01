@@ -6,6 +6,8 @@ class NumeroPadovan {
     valor = 0;
     binario = 2;
     hexadecimal = 16;
+    contador = 0;
+    lista;
 
     getValor() {
         return this.valor;
@@ -82,4 +84,47 @@ class NumeroPadovan {
     getValorHexadecimal() {
         return this.valor.toString(this.hexadecimal);
     }
+
+    
+  feliz(n) {
+    if (n == 1) {
+      return true;
+    }
+    else {
+
+      if (this.contador < 20) {
+        this.lista = new Array();
+        var numero = n.toString();
+
+        for (var i = 0; i < numero.Length; i++) {
+          var a = numero[i].toString();
+          var number = a;
+          this.lista.push(number);
+        }
+
+        var suma = 0;
+        for (var i = 0; i < this.lista.Length; i++) {
+          var elevar = this.lista[i] * this.lista[i];
+
+          suma = suma + elevar;
+
+        }
+        this.contador++;
+
+        return this.feliz(suma);
+      }
+      else { return false; }
+    }
+
+  }
+
+  Capicua(numero) {
+    var numeroCadena="";
+     numeroCadena = numero.toString();
+    var NumeroInvertido="";
+    for (var i = numeroCadena.length - 1; i >= 0; i--) {
+      NumeroInvertido+=numeroCadena.substr(i, 1);
+    }
+    return numeroCadena === NumeroInvertido;
+  }
 }
