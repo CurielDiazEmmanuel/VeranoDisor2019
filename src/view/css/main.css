@@ -1,0 +1,36 @@
+h1{
+    font-family: "Homer Simpson", cursive;
+}
+
+body{
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+button{
+    text-decoration: none;
+    padding: 4px;
+    font-weight: 300;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #101110;
+    border-radius: 6px;
+    border: 2px solid #0b0b0c;
+}
+
+label{
+    font-family: "Homer Simpson", cursive;
+    display: inline-block;
+    width: 94px;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #e4e713;
+    border-radius: 6px;
+    border: 2px solid #09090a;
+  }
